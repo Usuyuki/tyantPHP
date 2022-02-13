@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+//簡易テスト的なことができるassert
+
 $hairetu=["あ","い","う","え","お"];
 
 foreach ($hairetu as $value) {

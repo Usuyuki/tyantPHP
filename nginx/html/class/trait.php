@@ -15,7 +15,7 @@ trait Cap{
 class Pack{
     use Cap;
     public $name;
-    public function __construct($name,$height){
+    public function __construct(string $name,int $height){
         $this->name=$name;
         $this->height=$height;
         
@@ -24,16 +24,18 @@ class Pack{
 class Beaker{
     use Cap;
     public $type;
-    public function __construct($name,$height){
-        $this->name=$name;
+    public function __construct(string $type,int $height){
+        $this->type=$type;
         $this->height=$height;
         
     }
 }
 
-$gyunyuPack=new Pack("gyunyuPack",10);
+$gyunyuPack=new Pack("牛乳パック",10);
 $coffeeBeaker=new Beaker("珈琲",20);
 
+echo $gyunyuPack->name."のサイズ";
 echo $gyunyuPack->getCapacity();
 echo "<br>";
+echo $coffeeBeaker->type."のサイズ";
 echo $coffeeBeaker->getCapacity();
